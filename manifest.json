@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Coloring.ai Chrome Extension",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "48": "icon48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "jquery-3.4.1.min.js",
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "alarms"
+    ],
+    "background": {
+        "scripts": [
+            "BPM.api.js",
+            "background.js"
+        ]
+    }
+}
